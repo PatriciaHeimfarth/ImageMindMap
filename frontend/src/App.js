@@ -5,7 +5,7 @@ var currY = '50';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Canvas></Canvas>
       <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg"
         onChange={(event) => { uploadImage() }} />
@@ -60,7 +60,7 @@ function Canvas(props) {
   }
 
   return (
-    <div id='canvas' onClick={markUploadPoint}  style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
+    <div id='canvas' onClick={markUploadPoint}  style={{ backgroundColor: 'black', width: '1800px', height: '1000px' }}>
     
     </div>
   );
