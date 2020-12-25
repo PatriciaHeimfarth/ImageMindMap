@@ -5,7 +5,8 @@ function App() {
   return (
     <div className="App">
       <Canvas></Canvas>
-      <input type="file" />
+      <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg"
+      onChange={(event)=> { alert("test")}}/>
     </div>
   );
 }
@@ -30,7 +31,8 @@ function Canvas(props) {
     marker.style.top = event.clientY + 'px';
     marker.style.left = event.clientX + 'px';
     document.getElementById('canvas').appendChild(marker)
-    
+
+     
   }
 
   return (
