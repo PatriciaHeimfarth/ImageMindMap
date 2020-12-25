@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <Canvas></Canvas>
-      <img src="" height="200" alt="Image preview..."></img>
       <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg"
         onChange={(event) => { uploadImage() }} />
     </div>
@@ -36,7 +35,7 @@ function Canvas(props) {
     alert("clientX: " + event.clientX + " - clientY: " + event.clientY);
   }
 
-  function uploadImage(event) {
+  function markUploadPoint(event) {
     // printMousePos(event);
     var marker = document.createElement("div");
     marker.style.position = 'absolute';
@@ -51,6 +50,7 @@ function Canvas(props) {
 
   return (
     <div id='canvas' style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
+    <img src="" height="50" alt="Image preview..."></img>
     </div>
   );
 
