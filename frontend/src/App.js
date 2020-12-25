@@ -33,6 +33,7 @@ export default App;
 
 
 function Canvas(props) {
+
   function printMousePos(event) {
     event.preventDefault();
     alert("clientX: " + event.clientX + " - clientY: " + event.clientY);
@@ -52,7 +53,7 @@ function Canvas(props) {
   }
 
   return (
-    <div id='canvas' style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
+    <div id='canvas' onClick={markUploadPoint}  style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
     
     </div>
   );
