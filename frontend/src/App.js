@@ -1,5 +1,7 @@
 import './App.css';
 
+var currX = '50';
+var currY = '50';
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
   function uploadImage() { 
     var image = document.createElement("img");
     image.style.width = "60px";
+    image.style.position = "absolute";
+    image.style.left = currX + 'px';
+    image.style.top = currY + 'px';
     document.getElementById('canvas').appendChild(image);
     var preview = document.getElementById('canvas').querySelector('img');
     var file = document.querySelector('input[type=file]').files[0];
@@ -49,6 +54,8 @@ function Canvas(props) {
     marker.style.borderRadius = '50%'
     marker.style.top = event.clientY + 'px';
     marker.style.left = event.clientX + 'px';
+    currX = event.clientX;
+    currY = event.clientY;
     document.getElementById('canvas').appendChild(marker)
   }
 
