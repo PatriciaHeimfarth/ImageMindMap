@@ -14,6 +14,9 @@ export default App;
 
 function Canvas(props) {
   return (
-    <h1>Canvas</h1>
+    <div style={{  backgroundColor: 'black', width:'800px',height:'800px' }}>
+   
+    </div>
+    
   );
 }
