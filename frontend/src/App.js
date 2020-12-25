@@ -60,7 +60,7 @@ function Canvas(props) {
   }
 
   return (
-    <div id='canvas' onClick={markUploadPoint}  style={{ backgroundColor: 'black', width: '1800px', height: '1000px' }}>
+    <div id='canvas' onClick={markUploadPoint}  style={{ backgroundColor: 'black', width: '1800px', height: '800px' }}>
     
     </div>
   );
