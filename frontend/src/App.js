@@ -20,15 +20,18 @@ function Canvas(props) {
   }
 
   function uploadImage(event){
-    printMousePos(event);
-
+   // printMousePos(event);
+    var marker = document.createElement("div");
+    marker.style.backgroundColor = "red";  
+    marker.style.width = '5px';
+    marker.style.height = '5px';
+    document.getElementById('canvas').appendChild(marker)
     
   }
 
   return (
-    <div onClick={uploadImage} style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
-
-    </div>
+    <div id='canvas' onClick={uploadImage} style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
+     </div>
   );
 
 
