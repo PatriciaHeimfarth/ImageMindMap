@@ -10,7 +10,10 @@ function App() {
     </div>
   );
   function uploadImage() { 
-    var preview = document.querySelector('img');
+    var image = document.createElement("img");
+    image.style.width = "60px";
+    document.getElementById('canvas').appendChild(image);
+    var preview = document.getElementById('canvas').querySelector('img');
     var file = document.querySelector('input[type=file]').files[0];
     var reader = new FileReader();
 
@@ -50,7 +53,7 @@ function Canvas(props) {
 
   return (
     <div id='canvas' style={{ backgroundColor: 'black', width: '800px', height: '800px' }}>
-    <img src="" height="50" alt="Image preview..."></img>
+    
     </div>
   );
 
