@@ -22,9 +22,13 @@ function Canvas(props) {
   function uploadImage(event){
    // printMousePos(event);
     var marker = document.createElement("div");
+    marker.style.position = 'absolute';
     marker.style.backgroundColor = "red";  
     marker.style.width = '5px';
     marker.style.height = '5px';
+    marker.style.borderRadius = '50%'
+    marker.style.top = event.clientY + 'px';
+    marker.style.left = event.clientX + 'px';
     document.getElementById('canvas').appendChild(marker)
     
   }
