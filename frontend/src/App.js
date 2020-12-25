@@ -18,12 +18,12 @@ function App() {
     image.style.left = currX + 'px';
     image.style.top = currY + 'px';
     document.getElementById('canvas').appendChild(image);
-    var preview = document.getElementById('canvas').querySelector('img');
+    var preview = document.getElementById('canvas').getElementsByTagName('img');
     var file = document.querySelector('input[type=file]').files[0];
     var reader = new FileReader();
 
     reader.onloadend = function () {
-      preview.src = reader.result;
+      preview[preview.length-1].src = reader.result;
     }
 
     if (file) {
