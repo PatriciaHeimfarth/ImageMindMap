@@ -11,7 +11,7 @@ function App() {
         onChange={(event) => { uploadImage() }} />
     </div>
   );
-  function uploadImage() { 
+  function uploadImage() {
     var image = document.createElement("img");
     image.style.width = "60px";
     image.style.position = "absolute";
@@ -23,7 +23,7 @@ function App() {
     var reader = new FileReader();
 
     reader.onloadend = function () {
-      preview[preview.length-1].src = reader.result;
+      preview[preview.length - 1].src = reader.result;
     }
 
     if (file) {
@@ -59,9 +59,25 @@ function Canvas(props) {
     document.getElementById('canvas').appendChild(marker)
   }
 
-  return (
-    <div id='canvas' onClick={markUploadPoint}  style={{ backgroundColor: 'black', width: '1800px', height: '800px' }}>
+  function drag(evt) {
     
+    evt.stopPropagation();
+    evt.preventDefault();
+  }
+
+  function drop(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    var imageUrl = evt.dataTransfer.getData('URL');
+    alert(imageUrl);
+  }
+
+  return (
+    <div id='canvas' onDragEnter={drag}
+    onDragExit={drag} onDragOver={drag}
+    onDrop={drop}
+      style={{ backgroundColor: 'black', width: '1800px', height: '800px' }}>
+
     </div>
   );
 
