@@ -70,7 +70,10 @@ function Canvas(props) {
     evt.preventDefault();
     var imageUrl = evt.dataTransfer.getData('URL');
     var image = document.createElement("img");
+    image.style.position = "absolute";
     image.style.width = "100px";
+    image.style.top = evt.clientY + 'px';
+    image.style.left =  evt.clientX + 'px';
     image.src=imageUrl;
     document.getElementById('canvas').appendChild(image);
   }
