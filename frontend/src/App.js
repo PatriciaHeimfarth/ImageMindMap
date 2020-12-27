@@ -69,7 +69,10 @@ function Canvas(props) {
     evt.stopPropagation();
     evt.preventDefault();
     var imageUrl = evt.dataTransfer.getData('URL');
-    alert(imageUrl);
+    var image = document.createElement("img");
+    image.style.width = "100px";
+    image.src=imageUrl;
+    document.getElementById('canvas').appendChild(image);
   }
 
   return (
